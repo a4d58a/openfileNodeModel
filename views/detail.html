@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="#book">
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			headloading();
+			localStorage.setItem("lasthref",window.location.href);
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		form{
+			padding-top: 50px;
+		}
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		#notice{
+			display:block;
+			margin-top: 0px;
+		}
+		li{
+			text-align: left;
+			width: 100%;
+		}
+		li:before{
+			content: ">>";
+			font-weight: bold;
+		}
+		.important a{
+			color: red;
+		}
+		#page{
+			display: inline;
+		}
+
+	</style>
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html#auth"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=maindiv>
+		<div id=notice class="main">
+			<h3>正文</h3>
+			<h4>省际线路购票实名制公告</h4>
+			<p id=date>(2016-06-23)</p>
+			<div id=text>
+					<p>6月23日，西安公路客运联网售票系统升级完成，这意味着，购买西安市内六家一
+				级客运站的省际班线客运车票已实行实名制。为做好汽车客运站的安保工作，保障旅
+				客的安全出行，根据西安市交通运输管理处的要求，5月23日起，在西安市的客运站
+				购买省际班车票，旅客需要出示身份证件，随后，各家客运站开始了售票系统的升级
+				工作，6月23日，各家客运站的站务系统升级完成，旅客购买省际班线车票时，必须
+				持有效身份证件才能购票。<p>
+				    <p>省际班线旅客购票从硬件上已经实现了实名制购买，旅客必须提供相关证件购票，
+				身份证、居住证、护照或户口，如无法提供身份证明的证件，乘客将无法购票。</p>
+			</div>
+			<ol>
+				<li class=neighbourpage>上一篇：<a href="##" class="disable">没有了</a></li>
+				<li class=neighbourpage>下一篇：<a href="##">当日票售票业务开通公告</a></li>
+			</ol>
+		</div>
+		<div id=bottom>
+		<div></div>
+		<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+	</div>
+	</body>
+</html>

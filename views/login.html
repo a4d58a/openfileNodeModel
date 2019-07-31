@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			headloading();
+			tagloading();
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		label{width: 120px;}
+		#login{height: 500px;}
+		#login form{
+			margin-top: 50px;
+		}
+		#warning{
+			color: orange;
+			margin: 0 auto;
+			width: 400px;
+			margin-top: 30px;
+			font-size: 20px;
+			font-weight: bold;
+		}	
+		#regist	.input{
+			margin-top: 10px;
+			color: red;
+			font-weight: normal;
+			font-size: 12px;
+			height: 30px;
+		}
+		#regist .notice{
+			text-align: center;
+			font-weight: normal;
+			font-size: 14px;
+			color: gray;
+			margin-top: 5px;
+			margin: 0 auto;
+		}
+		#warn{
+			color: red;
+		}
+	</style>
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html#auth"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=tag>
+		<div></div>
+		<li><a href="#login"><button>登录</button></a></li>
+		<li><a href="#regist"><button>注册</button></a></li>
+	</div>
+	<div id=maindiv>
+		<div id=login class="main1">
+			<h3>登录</h3>
+			<form>
+					<td><p><label for=name>用户名：</label></td><td><input type="text" name="" id=name></td></p>
+					<td><p><label for=pw>密 码：</label></td><td><input type="password" name="" id=pw></td></p>
+					<p id=warn>&nbsp</p>	
+			</form>	
+			<p><button id=loginbutton type=button>登录</button></td></p>	
+			<div id=forget><a href="">忘记密码?</a></div>
+		</div>
+		<div id=regist class="main">
+			<h3>注册</h3>
+			<p id=warning>注册时请输入真实有效的注册信息，注册完成后，请牢记您的注册账号和密码，以便您下次能够登录系统进行购票。</p>
+			<form id=registform>
+				<table align="center">
+					<p class="input"><label>用户名：</label><input type="text" name="" required="true" id=registuser
+						title=用户名应由5-20个数字与字母组成，不可包含其他符号、空格及中文
+						pattern="([a-z]|[A-Z]|[0-9]){5,20}">*(必填)<img src="">
+					</p>
+					<p class="notice" id=nregistuser>5-20个数字与字母组成的字符串，注册后不能修改。</p>
+
+					<p class="input"><label>密码：</label><input type="password" name="" required="true" id=pw1
+						title="密码为8-16位字母与数字混合串,不可包含其他符号、空格及中文" 
+						pattern="([a-z]|[A-Z]|[0-9]){6,16}">*(必填)<img src="">
+					</p>
+					<p class="notice" id=npw1>6-16个数字与字母组成的字符串。</p>
+				
+					<p class="input"><label>再次输入密码：</label><input type="password" name="" required="true" id=pw2
+						title="请保持两次的密码一致" 
+						pattern="([a-z]|[A-Z]|[0-9]){6,16}">*(必填)<img src="">
+					</p>
+					<p class="notice" id=npw2>请保持两次的密码一致。</p>
+
+					<p class="input"><label>真实姓名：</label><input type="text" name="" required="true" id=truename>
+						*(必填)<img src="">
+					</p>
+					<p class="notice" id=ntruename>请填写真实姓名，以便于查对。</p>
+
+					<p class="input"><label>身份证号：</label><input type="text" name="" required="true" id=cid
+						title="请正确填写身份证号" 
+						pattern="[0-9]{10}((01|03|05|07|08|10|12)(0[1~9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1~9]|[1-2][0-9]|30)|2(0[1~9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)">*(必填)<img src="">
+					</p>
+					<p class="notice" id=ncid>身份证号码为取票凭证，请正确填写(不可重复注册)。</p>
+
+					<p class="input"><label>联系电话：</label><input type="text" name="" required="true" id=phonenumber
+						title=请填写正确的电话号码
+						pattern="[0-9]{1,}(-|\s){0,1}[0-9]{1,}">*(必填)<img src="">
+					</p>
+					<p class="notice" id=nphonenumber>联系方式请正确填写</p>
+
+					<p class="input"><label>电子邮箱：</label><input type="email" name="" required="true" id=email
+						pattern="\w{1,}@\w{1,}\.\w{1,}">
+						*(必填)<img src="">
+					</p>
+					<p class="notice" id=nemail>电子邮箱可用于您取回忘记的密码，请正确填写</p>
+					<p><button id=submit type="button">提交</button></p>
+				</table>
+			<form>
+		</div>
+	</div>
+	<div id=bottom>
+		<div></div>
+		<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+	</div>
+</body>
+	<script src="tagchange.js"></script>
+	<script src="registcheck.js"></script>
+	<script src="logincheck.js"></script>
+</html>

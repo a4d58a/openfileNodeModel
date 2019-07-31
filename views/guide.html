@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	</script>
+	<script type="text/javascript">
+		localStorage.setItem("lasthref",window.location.href);
+		window.onload=function(){
+			headloading();
+			tagloading();
+		}	
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		form{
+			padding-top: 50px;
+		}
+		ol{
+			padding-top: 10px;
+		}
+		#maindiv li{
+			list-style-type:decimal;
+			margin: 0 auto;
+			width: 90%;
+			font-size: 16px;
+			margin-top: 15px;
+			text-align: left;
+		}
+		.stationintro{
+			vertical-align: top;
+			display: inline-block;
+			height: 500px;
+			width: 350px;
+			margin: 20px;
+			border-radius: 10px;
+		}
+		.stationintro p{
+			vertical-align: top;
+			color: black;
+		}
+		.stationintro img{
+			width: 350px;
+			height: 254px;
+			
+			margin-top: 10px
+			width: 280px;
+			height: 203px;
+		}
+		#maindiv .stationintro li{
+			vertical-align: top;
+			width: 100%;
+			font-size: 16px;
+			list-style: none;
+			margin-top: 5px;
+		}
+		#search{background-color: #4682B4;}
+		#search:active{background-color:#483D8B;}
+	</style>
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=tag>
+		<div></div>
+		<li><a href="#nous"><button>购票须知</button></a></li>
+		<li><a href="#station"><button>站场一览</button></a></li>
+		<li><a href="#ticket"><button>线下代售点</button></a></li>
+		<li><a href="#feedback"><button>联系我们</button></a></li>
+	</div>
+	<div id=maindiv>
+		<div id=nous class="main1">
+			<h3>购票须知</h3>
+			<ol>
+					<li>乘客可通过本系统在网上购买西安城南客运站、西安城北客运站、西安纺织城客运站、西安城西客运站、西安三府湾客运站，西安市汽车站的汽车客票。</li>
+					<li>在本网站购票，须先进行用户注册，登录后方可购票。</li>
+					<li>为了提高您的购票成功率，建议您在出行1小时前购票；如购买当日票，请提前安排好行程，预留足够的取票及乘车时间，以免发生误车。</li>
+					<li>购票时请准确填写乘车人的身份证号码与联系信息，取票时要验证乘车人身份证原件，错误的乘车信息将会导致无法取票。</li>
+					<li>请在工作时间内提前到乘车站取票，取票时间距发车时间太短就有可能发生误车，影响出行。</li>
+					<li>每位注册用户每日最多只能预定三张车票。本网站只预售成人全票，半票与儿童票请到车站购买。</li>
+					<li>如一个订单中包含多张客票，取票时须提供多个乘车人的身份证件原件,每位乘车人只能领取本人车票,不能代领。</li>
+					<li>发车前120分钟以上且未取票及未检票的订单可以在网上办理退票。手续费按票面金额10%计收，不足0.5元按0.5元计算。</li>
+					<li>网上退票无法提供退票凭证，如需要退票凭证请到车站取票后退票。</li>
+					<li>如购票过程中，出现问题请先拨打各车站服务电话或联系客运站服务台或进行咨询。</li>
+					<li>请尊重网上道德，遵守《全国人大常委会关于维护互联网安全的决定》。</li>
+					<li>请遵守中华人民共和国其他各项有关法律法规。</li>
+			</ol>
+		</div>
+		<div id=station class="main">
+			<h3>站场一览</h3>
+			<div class="stationintro">
+				<p align=center>纺织城客运站</p>
+				<img src="s1.png">
+				<li>地址：纺北路</li>
+				<li>邮编：710032</li>
+				<li>问讯：029－83460000 </li>
+				<li>公交42路、242路、416路、232路、233路、933路、237路、507路、213路、307路、231路、530路直达纺织城客运站，也可乘坐地铁1号线到纺织城站。</li>
+			</div>
+			<div class="stationintro">
+				<p align=center>三府湾客运站</p>
+				<img src="s2.png">
+				<li>地址：长缨西路353号</li>
+				<li>邮编：710032</li>
+				<li>咨询电话：029--83136088 </li>
+				<li>投诉电话：029--83136068</li>
+				<li>传 真：029--83136068 </li>
+				<li>乘坐市内公交32路、20路、28路、209路、706路、712路、718路、719路、213路、507路、519路、913路、912路多彩商城站下车即可到达三府湾客运站(多彩商城正对面)。</li>
+			</div>
+			<div class="stationintro">
+				<p align=center>西安城西客运站</p>
+				<img src="s3.png">
+				<li>地址：西安市枣园东路39号 </li>
+				<li>邮编：710032</li>
+				<li>问讯：029-84630000  </li>
+			</div>
+			
+		</div>
+		<div id=ticket class="main">
+			<h3>线下代售点</h3>
+			<div id=option>
+				<form>
+					<p>
+						<td><label>所在城市：</label></td>
+						<td>
+							<select id="city">
+								<option value="*">全部</option>
+							</select>
+						</td>
+						<td><span></span></td>
+					   	<td><label>所在区：</label></td>
+					   	<td>
+					   		<select id="town">
+					   			<option value="*">全部</option>
+							</select>
+					   	</td>
+					   	<button id=search class=book type=button>查询</button>
+					</p>
+				</form>
+			</div>
+			<form class=list id=ticketform>	
+				<table align="center">
+					<tr id=header><th>名字</th><th>地址</th><th>电话</th><th>备注</th></tr>
+				</table>
+		</div>
+		<div id=feedback class="main">
+			<h3>联系我们</h3>
+		</div>
+	</div>
+	<div id=bottom>
+		<div></div>
+		<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+	</div>
+</body>
+<script src="getposition.js"></script>
+<script type="text/javascript">
+	var xhr;
+	var form=document.getElementById("ticketform").children[0].children[0];	
+	document.getElementById("search").onclick=function(){
+		form.innerHTML="<tr id=header><th>名字</th><th>地址</th><th>电话</th><th>备注</th></tr>";
+	    if(window.XMLHttpRequest){
+            xhr=new XMLHttpRequest();
+        }else{
+            xhr=new ActiveXObject("Microsoft","XMLHTTP")
+        }
+        var str="ticket?city="+document.getElementById("city").options[document.getElementById("city").selectedIndex].value
+			+"&town="+document.getElementById("town").options[document.getElementById("town").selectedIndex].value;
+		xhr.open("get",str,true);
+		xhr.onreadystatechange=function(){
+			 if(xhr.readyState==4&&xhr.status==200){
+			 	datalist=JSON.parse(xhr.responseText);
+			 	if(datalist.length==0){
+			 		form.innerHTML+="<tr class=null><td colspan=10>无 查 询 结 果</td></tr>";
+			 	}else{
+			 		for(var i=0;i<datalist.length;i++){
+			 			form.innerHTML+="<tr><td>"+datalist[i].name+"</td><td>"+datalist[i].address+"</td><td>"+
+			 			datalist[i].phone+"</td><td>"+datalist[i].notice+"</td></tr>";
+			 		}
+			 	}
+			 }
+			
+		}
+		xhr.send();
+	}
+</script>
+<script src="tagchange.js"></script>
+</html>
+<script type="text/javascript" src="js/model.js"></script>

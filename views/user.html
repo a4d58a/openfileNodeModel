@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			headloading();
+			tagloading();
+			localStorage.setItem("lasthref",window.location.href);
+			if(getstorage("user")==""){
+				window.location="login.html#login";
+				alert('登录后才可进入用户中心');
+				
+			}
+			document.getElementById("maindiv").style.visibility="visible";
+			document.getElementById("headexit").onclick=function(){
+				localStorage.setItem("user","");
+				alert('退出成功，将跳转到首页');
+				window.location="index.html";
+			}
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		form{
+			padding-top: 50px;
+		}
+		#maindiv{
+			visibility: hidden;
+		}
+		#password label{
+			width: 140px;
+		}
+		#ppw1,#ppw2,#ppw3{
+			width: 250px;
+			margin: 0 auto;
+		}
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		#auth label{
+			padding: 0px;
+			border: 1px solid gray;
+			border-right: none;
+			height: 32px;
+			line-height: 30px;
+			font-size: 16px;
+			text-indent: 5px;
+			margin-top: 10px;
+		}
+		#auth input{
+			line-height: 30px;
+			padding: 0px;
+			margin: 0px;
+			height: 30px;
+			margin-top: 10px;
+			font-size: 16px;
+			text-indent: 5px;
+			width: 250px;
+			color: gray;
+		}
+		#auth p{
+			margin:0px;
+		}
+		#authedit,#saveedit,#quitedit{
+			width: 150px;
+		}
+		.editnotice{
+			padding-top: 5px;
+			display: inline-block;
+			visibility: hidden;
+			width: 320px;
+			height:30px;
+		}
+		#edit,#endedit{
+			display: inline-block;
+		}
+		#endedit{
+			display: none;
+		}
+		.warning{
+			padding-top: 20px;
+			color: red;
+		}
+		#option input{
+			width: 160px;
+		}
+		#option{
+			text-align: left;
+			height: 300px;
+		}
+		#option form{
+			margin-top: 10px;
+			display: inline-block;
+			padding-left: 50px;
+			width: 600px;
+		}
+		#notice{
+			text-align: center;
+			margin-top: 50px;
+			height: 200px;
+		}
+		#buttonbox{
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 60px;
+			right: 50px;
+			margin: 0 auto;
+		}
+		#buttonbox button{
+			width: 180px;
+			margin-top: 20px;
+		}
+		#list #header{
+			height: 30px;
+		}
+		#header th{
+			height: 30px;
+		}
+		.insidetext{
+			width: 90%;
+			height: 150px;
+		}
+		.insidetext li{
+			width: 60%;
+		}
+	</style>
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html#auth"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=tag>
+		<div></div>
+		<li><a href="#auth"><button>身份信息</button></a></li>
+		<li><a href="#password"><button>修改密码</button></a></li>
+		<li><a href="#book"><button>购票</button></a></li>
+		<li><a href="#return"><button>查票退票</button></a></li>
+	</div>
+	<div id=maindiv>
+		<div id=auth class="main1">
+			<h3>身份信息</h3>
+			<form id=authform>
+				<p><label>用户名</label><input type="text" name="" ReadOnly=true value=haha required="true" id=i1><span></span>
+					<label>用户状态</label><input type="text" name="" ReadOnly=true value=正常 required="true" id=i2></p>
+				<p><p class="editnotice" id=ni1>不可修改</p><span></span>
+				<p class="editnotice" id=ni2>不可修改</p></p>
+
+				<p><label>联系方式</label><input type="text" name="" ReadOnly=true value=13562623651 required="true" id=i3
+					pattern="[0-9]{1,}(-|\s){0,1}[0-9]{1,}"><span></span>
+					<label>电子邮箱</label><input type="email" name="" ReadOnly=true value=aes@asgae.asd required="true" id=i4
+					pattern="\w{1,}@\w{1,}\.\w{1,}"></p>
+				<p><p class="editnotice" id=ni3>联系方式请正确填写</p><span></span>
+				<p class="editnotice" id=ni4>电子邮箱可用于您取回忘记的密码，请正确填写</p></p>
+
+				<p><label>真实姓名</label><input type="text" name="" ReadOnly=true value=哈哈哈  required="true" id=i5
+					><span></span>
+					<label>身份证号</label><input type="text" name="" ReadOnly=true value=448951199805135206  required="true" id=i6 pattern="[0-9]{10}((01|03|05|07|08|10|12)(0[1~9]|[1-2][0-9]|3[0-1])|(04|06|09|11)(0[1~9]|[1-2][0-9]|30)|2(0[1~9]|[1-2][0-9]))[0-9]{3}([0-9]|x|X)"></p>
+				<p><p class="editnotice" id=ni5>请填写真实姓名，以便于查对</p><span></span>
+				<p class="editnotice" id=ni6>身份证号码为取票凭证，请正确填写(不可重复注册)</p></p>		
+			</form>
+				<div id=edit><button id=authedit>修改信息</button></div>
+					<div id=endedit><button id=saveedit>保存信息</button><span></span><button id=quitedit>放弃修改</button>
+						<p class=warning>所有可填项均不可为空</p></div>
+		</div>
+		<div id=password class="main">
+			<h3>修改密码</h3>
+			<form>
+				<p><label>输入原密码：</label><input type="password" name="" required="true" id="pw1"
+					title="输入当前使用的密码"></p>
+					<p id=ppw1>请输入正确的原密码</p>
+				<p><label>输入新密码：</label><input type="password" name="" required="true" id="pw2"
+					title="密码为6-16位字母与数字混合串,不可包含其他符号、空格及中文" 
+					pattern="([a-z]|[A-Z]|[0-9]){6,16}"></p>
+				<p id=ppw2>密码为6-16位字母与数字混合串,不可包含其他符号、空格及中文</p>
+				<p><label>再次输入新密码：</label><input type="password" name="" required="true" id="pw3"
+					title="请保持两次密码一致" 
+					pattern="([a-z]|[A-Z]|[0-9]){6,16}"></p>
+				<p id=ppw3>请保持两次密码一致</p>
+			</form>
+			<button id="passwordsubmit">提交</button>
+		</div>
+		<div id=book class="main">
+			<h3>购票</h3>
+			<div id=option>
+				<form>
+					<p>
+						<td><label>出发站点：</label></td>
+						<td>
+							<select id="start"></select>
+						</td>
+						<td><span></span></td>
+					   	<td><label>发车日期：</label></td>
+					   	<td>
+					   		<select id="startdate"></select>
+					   	</td>
+					</p>
+					<br>
+					<p>
+						<td><label>发车时间：</label></td>
+						<td>
+							<select id="starttime"></select>
+						</td>
+						<td><span></span></td>
+						<td><label>目 的 地：</label></td>
+						<td>
+							<input type="text" name="" id=destination>
+						</td>
+					</p>	
+					<p>目的地支持输入单个汉字进行模糊查询</p>
+					<a href="" id=line>点击此处查看所有网售线路</a>	
+				</form>
+				<div id=buttonbox>
+					<button id=onlinebook>查询网售班次</button><br>
+					<button id=offlinebook>查询全部班次</button>
+				</div>
+			</div>
+			<form class=list id=bookform>	
+				<table align="center">
+					<tr id=header><th>编号</th><th>目的地</th><th>发车日期</th><th>发车时间</th><th>线路名</th><th>乘车站</th>
+						<th>余票</th><th>车型</th><th>票价</th><th>备注</th><th>选择</th></tr>
+				</table>
+			</form>
+		</div>
+		<div id=return class="main">
+			<h3>查票退票</h3>
+			<div id=notice>
+				<div class="insidetext">
+					<p>温馨提示</p>
+					<li>进行查询与订票、退票等操作时请放缓动作，以避免服务器延迟可能带来的不必要的损失。</li>
+					<li>请务必如实填写您的购票信息，取票时请务必携带购票时登记的证件原件。</li>
+					<li>退票后，退款处理一般会在三到五个工作日内完成，请耐心等待。</li>
+					<li>账户状态异常时，已经预订的票将被自动取消</li>
+					<li>如有疑问，可以通过电话、移动端平台等向客服咨询。</li>
+				</div>
+			</div>
+			<form class=list id=returnform>	
+				<table align="center">
+					<tr id=header><th>编号</th><th>状态</th><th>目的地</th><th>发车日期</th><th>发车时间</th><th>线路名</th><th>乘车站</th><th>车型</th><th>票价</th><th>备注</th><th>选择</th></tr>
+				</table>
+			</form>
+		</div>
+		</div>
+	</div>
+	<div id=bottom>
+		<div></div>
+		<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+	</div>
+</body>
+<script src="tagchange.js"></script>
+<script src="passwordedit.js"></script>
+<script src="authedit.js"></script>
+<script src="searchsetting.js"></script>
+<script type="text/javascript">
+	document.getElementById("onlinebook").onclick=onlinesearch;
+	document.getElementById("offlinebook").onclick=offlinesearch;
+</script>
+<script src="return.js"></script>
+<script src="infoload.js"></script>
+</html>

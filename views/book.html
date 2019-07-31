@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="#book">
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			headloading();
+			localStorage.setItem("lasthref",window.location.href);
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		form{
+			padding-top: 50px;
+		}
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.warning{
+			padding-top: 20px;
+			color: red;
+		}
+		#option input{
+			width: 160px;
+		}
+		#option{
+			text-align: left;
+			height: 300px;
+		}
+		#option form{
+			margin-top: 10px;
+			display: inline-block;
+			padding-left: 50px;
+			width: 600px;
+		}
+		#notice{
+			text-align: center;
+			margin-top: 50px;
+			height: 200px;
+		}
+		#buttonbox{
+			width: 300px;
+			height: 200px;
+			position: absolute;
+			top: 60px;
+			right: 50px;
+			margin: 0 auto;
+		}
+		#buttonbox button{
+			width: 180px;
+			margin-top: 20px;
+		}
+		#list #header{
+			height: 30px;
+		}
+		#header th{
+			height: 30px;
+		}
+		.insidetext{
+			width: 90%;
+			height: 150px;
+		}
+		.insidetext li{
+			width: 60%;
+		}
+		#book{
+			display: block;
+		}
+		#bookform{
+			margin-bottom: 30px;
+		}
+	</style>
+
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html#auth"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=maindiv>
+		<div id=book class="main">
+			<h3>售票查询</h3>
+			<div id=option>
+				<form action=none>
+					<p>
+						<td><label>出发站点：</label></td>
+						<td>
+							<select id="start">
+								<option value="all">全部</option>
+								<option value="城南客运站">城南客运站</option>
+								<option value="城北客运站">城北客运站</option>
+								<option value="城西客运站">城西客运站</option>
+							</select>
+						</td>
+						<td><span></span></td>
+					   	<td><label>发车日期：</label></td>
+					   	<td>
+					   		<select id="startdate">
+								<option value="2018-05-18">2018-05-18</option>
+								<option value="2018-05-19">2018-05-19</option>
+								<option value="2018-05-20">2018-05-20</option>
+								<option value="2018-05-21">2018-05-21</option>
+							</select>
+					   	</td>
+					</p>
+					<br>
+					<p>
+						<td><label>发车时间：</label></td>
+						<td>
+							<select id="starttime">
+								<option value="all">所有时段</option>
+								<option value="06:00">06:00后</option>
+								<option value="07:00">07:00后</option>
+								<option value="08:00">08:00后</option>
+								<option value="09:00">09:00后</option>
+								<option value="10:00">10:00后</option>
+								<option value="11:00">11:00后</option>
+								<option value="12:00">12:00后</option>
+							</select>
+						</td>
+						<td><span></span></td>
+						<td><label>目 的 地：</label></td>
+						<td>
+							<input type="text" name="" id=destination>
+						</td>
+					</p>	
+					<p>目的地支持输入单个汉字进行模糊查询</p>
+					<a href="" id=line>点击此处查看所有网售线路</a>	
+				</form>
+				<div id=buttonbox>
+					<button id=onlinebook>查询网售班次</button><br>
+					<button id=offlinebook>查询全部班次</button>
+				</div>
+			</div>
+			<form class=list id=bookform>	
+				<table align="center">
+					<tr id=header><th>编号</th><th>目的地</th><th>发车日期</th><th>发车时间</th><th>线路名</th><th>乘车站</th>
+						<th>余票</th><th>车型</th><th>票价</th><th>备注</th><th>选择</th></tr>
+				</table>
+			</form>
+		</div>
+		<div id=bottom>
+			<div></div>
+			<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+		</div>
+		</body>
+</html>
+<script src="searchsetting.js"></script>
+<script type="text/javascript">
+	document.getElementById("onlinebook").onclick=onlinesearch;
+	document.getElementById("offlinebook").onclick=offlinesearch;
+</script>
