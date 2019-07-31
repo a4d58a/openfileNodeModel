@@ -30,3 +30,5 @@ app.post('/bookinfoload',router.bookinfoload);
 app.get('/date',router.date);
 app.get('/ticket',router.ticket);
 app.get('/line',router.line);
+
+module.exports = app ;
