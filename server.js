@@ -2,10 +2,15 @@
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
-    
+ 
+const router = require('./router.js');
+const qs = require('querystring');
+const bodyParser=require('body-parser');
+
 Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
+app.use(express.static('views'));
 app.use(morgan('combined'))
 
 var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
@@ -93,6 +98,23 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null});
   }
 });
+
+app.post('/login',router.login);
+app.post('/regist',router.regist);
+app.post('/namerepeatcheck',router.namerepeatcheck);
+app.post('/cidrepeatcheck',router.cidrepeatcheck);
+app.post('/pwcheck',router.pwcheck);
+app.post('/pwedit',router.pwedit);
+app.post('/infoload',router.infoload);
+app.post('/authedit',router.authedit);
+app.post('/cidrepeatcheckforuser',router.cidrepeatcheckforuser);
+app.post('/book',router.book);
+app.post('/returnticket',router.returnticket);
+app.post('/bookinfoload',router.bookinfoload);
+
+app.get('/date',router.date);
+app.get('/ticket',router.ticket);
+app.get('/line',router.line);
 
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already

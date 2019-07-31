@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_self" />
+	<meta charset="utf-8">
+	<script src="windowload.js"></script>
+	<script type="text/javascript">
+		window.onload=function(){
+			headloading();
+			localStorage.setItem("lasthref",window.location.href);
+		}
+	</script>
+	<link rel="stylesheet" type="text/css" href="module.css">
+	<style type="text/css">
+		form{
+			padding-top: 50px;
+		}
+		span{
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+		.warning{
+			padding-top: 20px;
+			color: red;
+		}
+		#option input{
+			width: 160px;
+		}
+		#option{
+			text-align: left;
+			height: 300px;
+		}
+		#option form{
+			margin-top: 10px;
+			display: inline-block;
+			padding-left: 50px;
+			width: 600px;
+		}
+		#notice{
+			height: 800px;
+			display:block;
+			margin-top: 0px;
+		}
+		ol{
+			border-left: 2px solid #F5F5F5;
+			border-right: 2px solid #F5F5F5;
+			width: 90%;
+			padding: 0px;
+			padding-top: 30px;
+			margin: 0 auto;
+			margin-top: 10px;
+			height: 600px;
+		}
+		li{
+			text-align: left;
+			width: 100%;
+		}
+		li:before{
+			content: ">>";
+			font-weight: bold;
+		}
+		.important a{
+			color: red;
+		}
+		#pagebox{
+			height: 50px;
+		}
+
+		#pagebox a{
+			font-size: 20px;
+			text-decoration: underline;
+		}
+		#page{
+			display: inline;
+		}
+	</style>
+	<title>XXX公路交通客运系统</title>
+</head>
+<body>
+	<div id=head>
+		<div id=headuser>
+			<div>您好！</div>
+			<div id=headlogin>请先 <a href="login.html#login"> 登录 </a>|<a href="login.html#regist"> 注册 </a></div>
+			<div id=headbox><a href="user.html#auth"> 用户中心 </a>|<a href="#" id=headexit> 退出 </a></div>
+		</div>
+		<div id=phone>联系电话：52505205 </div>
+		<div id=logo><img src="1.jpg"> XXX公路客运网上售票系统</div>
+	</div>
+	<div id=guide>
+		<div><a href="index.html">首页</a></div>
+		<div><a href="user.html#auth">用户中心</a></div>
+		<div><a href="notice.html">通知公告</a></div>
+		<div><a href="guide.html#nous">出行指引</a></div>
+		<div><a href="#">联系我们</a></div>
+	</div>
+	<div id=maindiv>
+		<div id=notice class="main">
+			<h3>公告</h3>
+			<ol>
+				<ul>
+					<li><span class="important"><a href="detail.html"> 省际线路购票实名制公告</a></span><span class="date">(2016-06-23)</span></li>
+					<li><span class="important"><a href=""> 当日票售票业务开通公告</a></span><span class="date">(2016-01-14)</span></li>
+				</ul>
+				<br>
+				<ul>
+					<li><span class="normal"><a href="">积极行动，解决出行难问题</a></span><span class="date">(2017-01-10)</span></li>
+					<li><span class="normal"><a href="">2017春运邮储支付，温暖回家路，送手机流量</a></span><span class="date">(2017-01-10)</span></li>
+
+					<li><span class="normal"><a href=""> 城南客运站国庆乘车公告</a></span><span class="date">(2014-09-29)</span></li>
+					<li><span class="normal"><a href="">城南客运站关于网上购票及取票注意事项的再次声明</a></span><span class="date">(2013-12-30)</span></li>
+					<li><span class="normal"><a href="">央行升级支付系统公告</a></span><span class="date">(2013-09-30)</span></li>
+					<li><span class="normal"><a href=""> 城北客运站增加网上售票线路公告</a></span><span class="date">(2011-12-27)</span></li>
+					<li><span class="normal"><a href="">三府湾客运站开通网上售票线路公告</a></span><span class="date">(2011-12-22)</span></li>
+					<li><span class="normal"><a href="">城南客运站网上支付功能公告</a></span><span class="date">(2011-12-16)</span></li>
+					<li><span class="normal"><a href="">对于多次订票而不取票的用户禁止订票</a></span><span class="date">(2011-01-23)</span></li>
+				</ul>
+			</ol>
+			<ol id=pagebox><a href="##" class="disable">上一页<</a><span class="space"></span><div id=page><a href="">1</a></div><span class="space"></span><a href="##" class="disable">>下一页</a></ol>
+		</div>
+		<div id=bottom>
+		<div></div>
+		<p>&copycopyright 20xx-20xx xxxglkp.com</p>
+	</div>
+	</body>
+</html>
