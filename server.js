@@ -1,12 +1,20 @@
+<<<<<<< HEAD
 //  OpenShift sample Node application
 var express = require('express'),
     app     = express(),
     morgan  = require('morgan');
- 
+ const router = require('./router.js');
+const qs = require('querystring');
+const bodyParser=require('body-parser');
+=======
+const http = require('http');
+const express = require('express');
+>>>>>>> 6b9d44a9cb651089ec20b30df1800e529868b5b9
 const router = require('./router.js');
 const qs = require('querystring');
 const bodyParser=require('body-parser');
 
+<<<<<<< HEAD
 Object.assign=require('object-assign')
 
 app.engine('html', require('ejs').renderFile);
@@ -98,6 +106,17 @@ app.get('/', function (req, res) {
     res.render('index.html', { pageCountMessage : null});
   }
 });
+=======
+var app = express();
+http.createServer(app).listen(8080);
+
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({
+   extended: false,                 //扩展模式
+   limit:    2*1024*1024           //限制-2M
+}));
+console.log("开始运行...");
+>>>>>>> 6b9d44a9cb651089ec20b30df1800e529868b5b9
 
 app.post('/login',router.login);
 app.post('/regist',router.regist);
@@ -115,6 +134,7 @@ app.post('/bookinfoload',router.bookinfoload);
 app.get('/date',router.date);
 app.get('/ticket',router.ticket);
 app.get('/line',router.line);
+<<<<<<< HEAD
 
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
@@ -143,5 +163,7 @@ initDb(function(err){
 
 app.listen(port, ip);
 console.log('Server running on http://%s:%s', ip, port);
+=======
+>>>>>>> 6b9d44a9cb651089ec20b30df1800e529868b5b9
 
 module.exports = app ;
